@@ -1,0 +1,39 @@
+.footer {
+	position: relative;
+	width: 100%;
+	padding: 30px 0;
+	background-color: rgba(0,0,0,0.64);
+	color: #fff;
+	border-top: 1px rgba(0,0,0,0.1) solid;
+}
+
+.footer .ft-place {
+	position: relative;
+	width: 1100px;
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	line-height: 1.5;
+}
+.footer .ft-place .col-1 {
+	grid-column: 1;
+}
+.footer .ft-place .col-2 {
+	grid-column: 2;
+}
+.footer .ft-place h3 {
+	font-weight: 600;
+	font-size: 20px;
+}
+.footer .ft-place p {
+	font-weight: 500;
+	font-size: 14px;
+}
+.footer .ft-place a {
+	color: #fff;
+}
+.footer .ft-place a:hover {
+	text-decoration: underline;
+}
