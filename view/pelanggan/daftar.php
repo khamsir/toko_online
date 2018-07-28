@@ -37,6 +37,11 @@
 				<div class="block">
 					<input class="txt txt-primary-color" type="text" name="no_telp" placeholder="Nomor Telepon">
 				</div>
+
+				<div class="block">
+					<input type="file" name="foto">
+				</div>
+
 				<div class="block" style="text-align: right;">
 					<input type="submit" name="submit" class="btn btn-main-color" value="Daftar">
 				</div>

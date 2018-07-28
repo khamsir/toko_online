@@ -11,10 +11,11 @@
 					<div class="pad-bot-15px"></div>
 					<div>
 						<input type="file" name="foto" id="foto" style="display: none;">
+
 						<label for="foto">
-							<button class="btn btn-primary-color btn-all">
+							<div class="btn btn-primary-color btn-all btn-div">
 								Ubah Foto
-							</button>
+							</div>
 						</label>
 					</div>
 				</div>

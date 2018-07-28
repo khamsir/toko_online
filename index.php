@@ -58,16 +58,16 @@
 				</div>
 			</div>
 			<div class="col-3">
-				<!--Ketika user belum login
+				<!--Ketika user belum login-->
 				<button class="btn btn-primary-color" onclick="openSignIn('open')">
 					Masuk
 				</button>
 				<button class="btn btn-main-color" style="margin-left: 10px;" onclick="openSignUp('open')">
 					Daftar
 				</button>
-				-->
+				
 
-				<!--Ketika user syudah login-->
+				<!--Ketika user syudah login
 				<a href="index.php?path=cart">
 					<button class="btn btn-main-color btn-circle">
 						<span class="fa fa-lg fa-shopping-cart"></span>
@@ -83,6 +83,7 @@
 						<span class="fa fa-lg fa-power-off"></span>
 					</button>
 				</a>
+				-->
 
 			</div>
 		</div>
