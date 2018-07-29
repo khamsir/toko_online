@@ -1,3 +1,10 @@
+<?php
+  session_start();
+    if($_SESSION['status'] != "admin"){
+      header('Location: ../index.php');
+      exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +53,7 @@
             <span>Pelanggan</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../database/proseslogout.php">
             <span>Keluar</span></a>
         </li>
       </ul>
