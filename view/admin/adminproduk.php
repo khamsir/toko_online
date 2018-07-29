@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
 	<!-- Untuk Header -->
-	<div>
-		<?php include 'public/adminheader.php'; ?>
-	</div>
+
 
 	<div>
 		<button>Barang</button>
@@ -42,6 +34,3 @@
 			</tr>
 		</table>
 	</div>
-	
-</body>
-</html>

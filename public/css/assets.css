@@ -1,0 +1,39 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.padding-bottom {
+	padding: 20px 0;
+}
+.pad-bot-5px {
+	padding-bottom: 5px;
+}
+.pad-bot-10px {
+	padding-bottom: 10px;
+}
+.pad-bot-15px {
+	padding-bottom: 15px;
+}
+.pad-bot-20px {
+	padding-bottom: 20px;
+}
+
+.pad-5px {
+	padding: 5px 0;
+}
+.pad-10px {
+	padding: 10px 0;
+}
+.pad-15px {
+	padding: 15px 0;
+}
+.pad-20px {
+	padding: 20px 0;	
+}
