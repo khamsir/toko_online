@@ -106,12 +106,12 @@
                       <td><?php echo $data['status']; ?></td>
                       <td><img src="../images/pelanggan/<?php echo $data['foto']; ?>" alt="" width="100px" height="100px"></td>
                       <td>
-                      <button class="btn btn-primary" type="button">
+                      <a class="btn btn-primary" href="formpelanggan.php?code=ubah&id=<?php echo $data['id']; ?>">
                         Ubah
-                      </button>
-                      <button class="btn btn-primary" type="button">
+                      </a>
+                      <a class="btn btn-primary" href="hapus.php?code=pelanggan&id=<?php echo $data['id']; ?>">
                         Hapus
-                      </button>
+                      </a>
                       </td>
                     </tr>
                   <?php } ?>

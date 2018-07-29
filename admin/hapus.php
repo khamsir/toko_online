@@ -1,19 +1,22 @@
 <?php
-	required('../database/koneksi.php');
+	require('../database/koneksi.php');
 
-	$code = $_GET['kode'];
+	$code = $_GET['code'];
 	$id = $_GET['id'];
 
 	if ($code=='barang') {
-		$sql = "DELETE barang WHERE id='$id'";
+		$sql = "DELETE FROM barang WHERE id='$id'";
 		if ($koneksi->query($sql) === TRUE) {
 			header('Location: index.php');
 			exit();
+		} else {
+			echo "string";
 		}
-	} else {
-		$sql = "DELETE akun WHERE id='$id'";
+	} else if($code=='pelanggan') {
+		$sql = "DELETE FROM akun WHERE id='$id'";
 		if ($koneksi->query($sql) === TRUE) {
 			header('Location: pelanggan.php');
 			exit();
+		}
 	}
 ?>

@@ -1,9 +1,27 @@
 <?php
   $code = $_GET['code'];
   $id = $_GET['id'];
+  require("../database/koneksi.php");
 
+  if(isset($_POST['tambah'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+    $no_telp = $_POST['no_telp'];
+    $inputfoto = $_POST['inputfoto'];
 
-  
+    $sql = "INSERT INTO akun SET nama='$nama', username='$username', password='$password', nama='$nama', no_telp=$no_telp, foto='$inputfoto'";
+    if($koneksi->query($sql) === TRUE){
+      header('Location: index.php');
+      exit();
+    }
+  }
+
+  $sqlShow = "SELECT * FROM akun WHERE id='$id'; ";
+  $hasilShow = $koneksi->query($sqlShow);
+  $data = $hasilShow->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -37,45 +55,38 @@
         <div class="card-header"><strong>Data Pelanggan</strong> 
         </div>
         <div class="card-body">
-          <form>
+          <form action="formpelanggan.php" method="post">
           <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" disabled>
+                <input type="text" name="Username" class="form-control" required="required" autofocus="autofocus" disabled value="<?php echo $data['username']; ?>">
                 <label for="inputEmail">Username</label>
               </div>
             </div>
 
             <div class="form-group">
               <div class="form-label-group">
-                <input type="password" id="inputEmail" class="form-control" required="required" autofocus="autofocus">
+                <input type="password" name="password" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['password']; ?>">
                 <label for="inputEmail">Password</label>
               </div>
             </div>
 
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus">
+                <input type="text" name="nama" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['nama']; ?>">
                 <label for="inputEmail">Nama</label>
               </div>
             </div>
 
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus">
+                <input type="text" name="alamat" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['alamat']; ?>">
                 <label for="inputEmail">Alamat</label>
               </div>
             </div>
             
             <div class="form-group">
               <div class="form-label-group">
-                <input type="password" id="inputEmail" class="form-control" required="required" autofocus="autofocus">
-                <label for="inputEmail">Password</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" required="required" autofocus="autofocus">
+                <input type="text" name="no_telp" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['no_telp']; ?>">
                 <label for="inputEmail">Nomor Telepon</label>
               </div>
             </div>
@@ -87,7 +98,7 @@
               </div>
             </div>
 
-            <a class="btn btn-primary btn-block" href="index.html">Ubah</a>
+            <a class="btn btn-primary btn-block" name='submit' type="submit">Ubah</a>
           </form>
           </div>
         </div>

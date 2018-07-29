@@ -46,19 +46,7 @@
 			</div>
 			<div class="col-2">
 				<div class="search">
-					<form method="get" action="index.php">
-						<input type="hidden" name="path" value="search">
-						<input type="text" name="keyword" placeholder="Aku ingin cari..." required="true" class="src txt txt-main-color">
-						<select name="berdasarkan" class="ctr select">
-							<option value="id">Id</option>
-							<option value="nama">Nama</option>
-							<option value="kategori">Kategori</option>
-							<option value="harga">Harga</option>
-						</select>
-						<button class="btn btn-main-color">
-							<div class="fa fa-lg fa-search"></div>
-						</button>
-					</form>
+				
 				</div>
 			</div>
 			<div class="col-3">

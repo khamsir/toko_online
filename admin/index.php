@@ -111,9 +111,9 @@
                       <a class="btn btn-primary" type="button" href="formbarang.php?code=ubah&id=<?php echo $data['id']; ?>">
                         Ubah
                       </a>
-                      <button class="btn btn-primary" type="button" href="hapus.php?code=barang&id=<?php echo $data['id']; ?>">
+                      <a class="btn btn-primary" type="button" href="hapus.php?code=barang&id=<?php echo $data['id']; ?>">
                         Hapus
-                      </button>
+                      </a>
                       </td>
                     </tr>
                   <?php } ?>
