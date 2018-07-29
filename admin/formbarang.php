@@ -16,6 +16,7 @@
       exit();
     }
   }
+
   $sqlShow = "SELECT * FROM barang WHERE id='$id'; ";
   $hasilShow = $koneksi->query($sqlShow);
   $data = $hasilShow->fetch_assoc();
@@ -31,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> </title>
+    <title>Admin DistroIT</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,21 +55,21 @@
             <form action="formbarang.php" method="post">
             <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" nama="namabarang" class="form-control" required="required" autofocus="autofocus">
+                  <input type="text" id="inputEmail" name="namabarang" class="form-control" required="required" autofocus="autofocus">
                   <label for="inputEmail">Nama Barang</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" nama="harga" class="form-control" required="required" autofocus="autofocus">
+                  <input type="text" id="inputEmail" name="harga" class="form-control" required="required" autofocus="autofocus">
                   <label for="inputEmail">Harga</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" nama="stock" class="form-control" required="required" autofocus="autofocus">
+                  <input type="text" id="inputEmail" name="stock" class="form-control" required="required" autofocus="autofocus">
                   <label for="inputEmail">Stok</label>
                 </div>
               </div>
@@ -156,7 +157,7 @@
                 </div>
               </div>
 
-              <a class="btn btn-primary btn-block" href="index.html">Ubah</a>
+              <a class="btn btn-primary btn-block" href="index.php">Ubah</a>
             </form>
             </div>
           </div>
