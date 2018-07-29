@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +63,7 @@
 			</div>
 			<div class="col-3">
 				<?php
-					session_start();
+					// session_start();
 
 					if (isset($_SESSION['id'])) {
 						?>

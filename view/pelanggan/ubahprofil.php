@@ -1,3 +1,18 @@
+<?php
+	require('database/koneksi.php');
+    $id = $_SESSION['id'];
+    $sqlShow = "SELECT * FROM akun WHERE id='$id'; ";
+    $hasilShow = $koneksi->query($sqlShow);
+    $data = $hasilShow->fetch_assoc();
+
+    $username = $data['username'];
+    $password = $data['password'];
+    $ulangiPassword = $data['password'];
+    $nama = $data['nama'];
+    $alamat = $data['alamat'];
+    $notelp = $data['no_telp'];
+?>
+
 <!-- Untuk Isi -->
 <div style="width: 800px; margin: auto;">
 	<div class="pad-bot-15px"></div>
@@ -24,38 +39,30 @@
 
 		<div>
 			<div class="mid">
-				<form>
+				<form action="view/pelanggan/ubah.php" method="post">
 					<div class="block">
-						<input class="txt txt-primary-color" type="text" name="username" placeholder="Username">
+						<input class="txt txt-primary-color" type="text" name="username" value="<?php echo $username; ?>">
 					</div>
-							
+
 					<div class="block">
-						<input class="txt txt-primary-color" type="password" name="password" placeholder="Password">
+						<input class="txt txt-primary-color" type="password" name="password">
 					</div>
-							
+
 					<div class="block">
-						<input class="txt txt-primary-color" type="password" name="password2" placeholder="Ulangi Password">
+						<input class="txt txt-primary-color" type="text" name="nama" value="<?php echo $nama; ?>">
 					</div>
-							
+
 					<div class="block">
-						<input class="txt txt-primary-color" type="text" name="nama" placeholder="Nama Lengkap">
+						<input class="txt txt-primary-color" type="text" name="alamat" value="<?php echo $alamat; ?>">
 					</div>
-							
+
 					<div class="block">
-						<input class="txt txt-primary-color" type="text" name="alamat" placeholder="Alamat">
-					</div>
-							
-					<div class="block">
-						<input class="txt txt-primary-color" type="Email" name="email" placeholder="Email">
-					</div>
-							
-					<div class="block">
-						<input class="txt txt-primary-color" type="text" name="no_telp" placeholder="Nomor Telepon">
+						<input class="txt txt-primary-color" type="text" name="no_telp" value="<?php echo $notelp; ?>">
 					</div>
 					<div class="block" style="text-align: right;">
 						<input type="submit" name="submit" class="btn btn-main-color" value="Ubah">
 					</div>
-							
+
 				</form>
 			</div>
 		</div>

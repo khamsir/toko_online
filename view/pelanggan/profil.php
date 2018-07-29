@@ -1,5 +1,4 @@
 <?php
-	// session_start();
 	require("database/koneksi.php");
 	$id = $_SESSION['id'];
 
@@ -10,6 +9,7 @@
 
 <!-- Untuk Isi -->
 <div class="profile">
+
 	<div class="col-1">
 		<div class="ff">
 			<div class="top" style="background-image: url(images/pelanggan/<?php echo $data['foto']; ?>)"></div>
@@ -18,7 +18,7 @@
 					<h3><?php echo $data['nama']; ?></h3>
 				</div>
 				<div>
-					<a href="index.php?path=ubahprofil">
+					<a href="index.php?path=ubahprofil&id=<?php echo $data['id']; ?>">
 						<button class="btn btn-primary-color btn-all">
 							Edit Profile
 						</button>
@@ -31,9 +31,7 @@
 	<div class="col-2">
 		<h3 class="pad-15px">Barang yang sudah dibeli</h3>
 		<div>
-			<?php for ($i=0; $i < 8; $i++) {
-				include "view/card-item-list.php";
-			} ?>
+			<?php include "view/card-item-list.php"; ?>
 		</div>
 	</div>
 
