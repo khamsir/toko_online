@@ -9,7 +9,11 @@
 			<img src="images/icon/logo2.png">
 		</div>
 		<div class="mid">
+<<<<<<< HEAD
 			<form method="post" action="database/prosesdaftar.php" enctype="multipart/form-data">
+=======
+			<form>
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36
 				<div class="block">
 					<input class="txt txt-primary-color" type="text" name="username" placeholder="Username">
 				</div>
@@ -19,6 +23,13 @@
 				</div>
 						
 				<div class="block">
+<<<<<<< HEAD
+=======
+					<input class="txt txt-primary-color" type="password" name="password2" placeholder="Ulangi Password">
+				</div>
+						
+				<div class="block">
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36
 					<input class="txt txt-primary-color" type="text" name="nama" placeholder="Nama Lengkap">
 				</div>
 						
@@ -46,5 +57,8 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36

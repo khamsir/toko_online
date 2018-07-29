@@ -9,7 +9,11 @@
 			<img src="images/icon/logo2.png">
 		</div>
 		<div class="mid">
+<<<<<<< HEAD
 			<form method="post" action="database/prosesmasuk.php">
+=======
+			<form>
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36
 				<div class="block">
 					<input type="text" name="username" placeholder="Username" class="txt txt-primary-color" required="true">
 				</div>
@@ -28,5 +32,8 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36

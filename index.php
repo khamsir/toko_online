@@ -61,6 +61,7 @@
 				</div>
 			</div>
 			<div class="col-3">
+<<<<<<< HEAD
 				<?php
 					session_start();
 
@@ -100,6 +101,34 @@
 				
 
 				
+=======
+				<!--Ketika user belum login-->
+				<button class="btn btn-primary-color" onclick="openSignIn('open')">
+					Masuk
+				</button>
+				<button class="btn btn-main-color" style="margin-left: 10px;" onclick="openSignUp('open')">
+					Daftar
+				</button>
+				
+
+				<!--Ketika user syudah login
+				<a href="index.php?path=cart">
+					<button class="btn btn-main-color btn-circle">
+						<span class="fa fa-lg fa-shopping-cart"></span>
+					</button>
+				</a>
+				<a href="index.php?path=profile">
+					<button class="btn btn-primary-color btn-circle" style="margin-left: 10px;">
+						<span class="fa fa-lg fa-user"></span>
+					</button>
+				</a>
+				<a href="#">
+					<button class="btn btn-primary-color btn-circle" style="margin-left: 10px;">
+						<span class="fa fa-lg fa-power-off"></span>
+					</button>
+				</a>
+				-->
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36
 
 			</div>
 		</div>
@@ -145,7 +174,11 @@
 		?>
 	</div>
 
+<<<<<<< HEAD
 	<!-- Untuk footer -->
+=======
+	<!-- Untuk Banner -->
+>>>>>>> ac7b72c83c37c6fbccbc23a0c0581238ebdcee36
 	<div class="footer">
 
 		<!-- start: Photo Stream -->
