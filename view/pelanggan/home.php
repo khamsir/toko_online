@@ -7,7 +7,7 @@
 <div class="place-produk">
     <?php while($data = $hasil->fetch_assoc()) { ?>
     <div class="card-item">
-        <a href="index.php?path=detail&id=<?php echo $i; ?>">
+        <a href="index.php?path=detail&id=<?php echo $data['id']; ?>">
             <div class="top">
                 <div class="image" style="background-image: url('images/barang/<?php echo $data['foto'] ?>');"></div>
             </div>

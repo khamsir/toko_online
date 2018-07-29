@@ -1,3 +1,11 @@
+<?php
+  $code = $_GET['code'];
+  $id = $_GET['id'];
+
+
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

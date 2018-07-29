@@ -1,7 +1,7 @@
 <?php
     require('database/koneksi.php');
     $id = $_SESSION['id'];
-    $sql = "SELECT keranjang.tgl_ditambah ,barang.* FROM keranjang JOIN barang ON keranjang.id_barang = barang.id JOIN akun ON keranjang.id_akun = akun.id WHERE akun.id = '$id' ";
+    $sql = "SELECT keranjang.tgl_ditambah,barang.* FROM keranjang JOIN barang ON keranjang.id_barang = barang.id JOIN akun ON keranjang.id_akun = akun.id WHERE akun.id = '$id' ";
     $hasil = $koneksi->query($sql);
 ?>
 

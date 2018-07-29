@@ -39,7 +39,7 @@
 
   <body id="page-top">
 
-    <div id="wrapper">
+    <div id="wrapper"> 
 
       <!-- Sidebar -->
       <!-- Sidebar -->
@@ -74,23 +74,6 @@
               <i class="fas fa-table"></i>
               Data Barang</div>
 
-                <!-- search bar -->
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="masukan kata kunci" aria-label="Search" aria-describedby="basic-addon2">
-                    <select name="berdasarkan">
-                      <option value="id">Id</option>
-                      <option value="nama">Nama</option>
-                      <option value="kategori">Kategori</option>
-                      <option value="harga">Harga</option>
-                    </select>
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
 
                 <!-- tombol CRUD -->
                   <div class="input-group">

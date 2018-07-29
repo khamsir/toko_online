@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Tables</title>
+    <title>Admin DistroIT</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,16 +41,16 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="index.php">
             <span>Barang</span>
           </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="transaksi.html">
+          <a class="nav-link" href="transaksi.php">
             <span>Transaksi</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pelanggan.html">
+          <a class="nav-link" href="pelanggan.php">
             <span>Pelanggan</span></a>
         </li>
         <li class="nav-item">
@@ -69,24 +69,6 @@
             <div class="card-header">
               <i class="fas fa-table"></i>
               Data Transaksi</div>
-
-                <!-- search bar -->
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="masukan kata kunci" aria-label="Search" aria-describedby="basic-addon2">
-                    <select name="berdasarkan">
-                      <option value="id">Id</option>
-                      <option value="tgl_beli">Tanggal Beli</option>
-                      <option value="tgl_dikirim">Tanggal Dikirim</option>
-                      <option value="status">Status Transaksi</option>
-                    </select>
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
 
             <div class="card-body">
               <div class="table-responsive">
@@ -114,9 +96,13 @@
                       <td><?php echo $data['foto_bukti']; ?></td>
                       <td><?php echo $data['status_transaksi']; ?></td>
                       <td>
-                        <button class="btn btn-primary" type="button">
-                        Ubah
-                      </button>
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <a class="btn btn-primary" type="button" href="formbarang.php?code=tambah">
+                        Tambah
+                      </a>
+                    </div>
+                  </div>
                       <button class="btn btn-primary" type="button">
                         Hapus
                       </button>
