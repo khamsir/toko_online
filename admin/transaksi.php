@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require('../database/koneksi.php');
+
+  $sql = "SELECT * FROM transaksi;";
+  $hasil = $koneksi->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,14 +104,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <?php while($data = $hasil->fetch_assoc()) { ?>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>2011/04/25</td>
-                      <td>2011/04/25</td>
+                      <td><?php echo $data['id']; ?></td>
+                      <td><?php echo $data['tgl_beli']; ?></td>
+                      <td><?php echo $data['tgl_dikirim']; ?></td>
+                      <td><?php echo $data['jumlah']; ?></td>
+                      <td><?php echo $data['total_harga']; ?></td>
+                      <td><?php echo $data['foto_bukti']; ?></td>
+                      <td><?php echo $data['status_transaksi']; ?></td>
                       <td>
                         <button class="btn btn-primary" type="button">
                         Ubah
@@ -113,6 +122,7 @@
                       </button>
                       </td>
                     </tr>
+                  <?php } ?>
                   </tbody>
                 </table>
               </div>

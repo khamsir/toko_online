@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  require('../database/koneksi.php');
+
+  $sql = "SELECT * FROM akun;";
+  $hasil = $koneksi->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,15 +112,16 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <?php while($data = $hasil->fetch_assoc()) { ?>
                     <tr>
-                      <td>Doris Wilder</td>
-                      <td>Sales Assistant</td>
-                      <td>Sidney</td>
-                      <td>23</td>
-                      <td>2010/09/20</td>
-                      <td>2010/09/20</td>
-                      <td>2010/09/20</td>
-                      <td>2010/09/20</td>
+                      <td><?php echo $data['id']; ?></td>
+                      <td><?php echo $data['username']; ?></td>
+                      <td><?php echo $data['password']; ?></td>
+                      <td><?php echo $data['nama']; ?></td>
+                      <td><?php echo $data['alamat']; ?></td>
+                      <td><?php echo $data['no_telp']; ?></td>
+                      <td><?php echo $data['status']; ?></td>
+                      <td><img src="../images/pelanggan/<?php echo $data['foto']; ?>" alt="" width="100px" height="100px"></td>
                       <td>
                       <button class="btn btn-primary" type="button">
                         Ubah
@@ -123,6 +131,7 @@
                       </button>
                       </td>
                     </tr>
+                  <?php } ?>
                   </tbody>
                 </table>
               </div>

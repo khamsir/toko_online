@@ -1,9 +1,14 @@
 <?php
   session_start();
+  require('../database/koneksi.php');
     if($_SESSION['status'] != "admin"){
       header('Location: ../index.php');
       exit();
     }
+
+  $sql = "SELECT * FROM barang;";
+  $hasil = $koneksi->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,9 +95,9 @@
                 <!-- tombol CRUD -->
                   <div class="input-group">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
+                      <a class="btn btn-primary" type="button" href="formbarang.php?code=tambah">
                         Tambah
-                      </button>
+                      </a>
                     </div>
                   </div>
 
@@ -111,22 +116,24 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <?php while($data = $hasil->fetch_assoc()){ ?>
                     <tr>
-                      <td>Doris Wilder</td>
-                      <td>Sales Assistant</td>
-                      <td>Sidney</td>
-                      <td>23</td>
-                      <td>2010/09/20</td>
-                      <td>2010/09/20</td>
+                      <td><?php echo $data['id']; ?></td>
+                      <td><?php echo $data['nama']; ?></td>
+                      <td><?php echo $data['harga']; ?></td>
+                      <td><?php echo $data['stok']; ?></td>
+                      <td><?php echo $data['kategori']; ?></td>
+                      <td><img src="../images/barang/<?php echo $data['foto']; ?>" alt=""></td>
                       <td>
-                      <button class="btn btn-primary" type="button">
+                      <a class="btn btn-primary" type="button" href="formbarang.php?code=ubah&id=<?php echo $data['id']; ?>">
                         Ubah
-                      </button>
-                      <button class="btn btn-primary" type="button">
+                      </a>
+                      <button class="btn btn-primary" type="button" href="hapus.php?code=barang&id=<?php echo $data['id']; ?>">
                         Hapus
                       </button>
                       </td>
                     </tr>
+                  <?php } ?>
                   </tbody>
                 </table>
               </div>
