@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
     session_start();
-=======
-	session_start();
->>>>>>> b3786ae8302c2dcdce56cdd0043bb774b34cd965
 	require('../database/koneksi.php');
 	$tgl = $_GET['tgl'];
 	$id_akun = $_SESSION['id'];
