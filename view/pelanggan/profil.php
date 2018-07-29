@@ -1,14 +1,21 @@
+<?php
+	// session_start();
+	require("database/koneksi.php");
+	$id = $_SESSION['id'];
+
+	$sql = "SELECT * FROM akun WHERE id='$id';";
+	$hasil = $koneksi->query($sql);
+	$data = $hasil->fetch_assoc();
+?>
+
 <!-- Untuk Isi -->
 <div class="profile">
 	<div class="col-1">
 		<div class="ff">
-			<div class="top" style="background-image: url(images/icon/sponbop.jpg)"></div>
+			<div class="top" style="background-image: url(images/pelanggan/<?php echo $data['foto']; ?>)"></div>
 			<div class="mid">
 				<div class="pad-15px">
-					<h3>Name</h3>
-				</div>
-				<div class="pad-bot-15px">
-					<p>Email</p>
+					<h3><?php echo $data['nama']; ?></h3>
 				</div>
 				<div>
 					<a href="index.php?path=ubahprofil">

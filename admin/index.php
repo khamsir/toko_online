@@ -40,16 +40,16 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="index.php">
             <span>Barang</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="transaksi.html">
+          <a class="nav-link" href="transaksi.php">
             <span>Transaksi</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pelanggan.html">
+          <a class="nav-link" href="pelanggan.php">
             <span>Pelanggan</span></a>
         </li>
         <li class="nav-item">
