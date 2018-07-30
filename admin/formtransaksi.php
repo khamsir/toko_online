@@ -29,32 +29,29 @@
         <div class="card-header"><strong>Data Barang</strong> 
         </div>
         <div class="card-body">
-          <form>
-          <div class="form-group">
-              <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" disabled>
-                <label for="inputEmail">Id</label>
+          <form method="post" action="ubahtransaksi.php">
+            <div >
+              <div>
+                
+                <input type="hidden" name="id" id="inputEmail" class="form-control" required="required" autofocus="autofocus" value="<?php echo $_GET['id']; ?>">
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="inputEmail">Foto Bukti pengiriman</label>
-              <div class="form-label-group">
-                <input type="file" id="inputfoto">
-              </div>
-            </div>           
+                       
 
           <div class="form-group">
-              <label for="inputEmail">Kategori</label>
+              <label for="inputEmail">Status</label>
               <div class="form-label-group">
-                <select name="kategori">
+                <select name="status">
                   <option value="belum dikirim">Belum Dikirim</option>
                   <option value="sudah dikirim">Sudah Dikirim</option>
                 </select>
               </div>
             </div>
 
-            <a class="btn btn-primary btn-block" href="index.html">Ubah</a>
+            <button class="btn btn-primary btn-block" type="submit">
+              Ubah
+            </button>
           </form>
           </div>
         </div>

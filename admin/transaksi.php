@@ -8,7 +8,6 @@
 ?>
 
 <?php
-  session_start();
   require('../database/koneksi.php');
 
   $sql = "SELECT * FROM transaksi;";
@@ -78,7 +77,13 @@
             <div class="card-header">
               <i class="fas fa-table"></i>
               Data Transaksi</div>
-
+              <div class="input-group">
+                    <div class="input-group-append">
+                      <a class="btn btn-primary" type="button" href="formbarang.php?code=tambah">
+                        Tambah
+                      </a>
+                    </div>
+                  </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -86,10 +91,8 @@
                     <tr>
                       <th>Id</th>
                       <th>Tanggal Beli</th>
-                      <th>Tanggal Dikirim</th>
                       <th>Jumlah</th>
                       <th>Total Harga</th>
-                      <th>Foto Bukti</th>
                       <th>Status Transaksi</th>
                       <th>Keterangan</th>
                     </tr>
@@ -99,22 +102,16 @@
                     <tr>
                       <td><?php echo $data['id']; ?></td>
                       <td><?php echo $data['tgl_beli']; ?></td>
-                      <td><?php echo $data['tgl_dikirim']; ?></td>
                       <td><?php echo $data['jumlah']; ?></td>
                       <td><?php echo $data['total_harga']; ?></td>
-                      <td><?php echo $data['foto_bukti']; ?></td>
                       <td><?php echo $data['status_transaksi']; ?></td>
                       <td>
-                  <div class="input-group">
-                    <div class="input-group-append">
-                      <a class="btn btn-primary" type="button" href="formbarang.php?code=tambah">
-                        Tambah
+
+                      <a href="formtransaksi.php?id=<?php echo $data['id']; ?>">
+                        <button class="btn btn-primary" type="button">
+                          Ubah
+                        </button>
                       </a>
-                    </div>
-                  </div>
-                      <button class="btn btn-primary" type="button">
-                        Hapus
-                      </button>
                       </td>
                     </tr>
                   <?php } ?>

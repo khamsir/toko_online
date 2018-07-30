@@ -8,7 +8,6 @@
 
 ?>
 <?php
-  session_start();
   require('../database/koneksi.php');
 
   $sql = "SELECT * FROM akun;";
@@ -94,7 +93,6 @@
                     <tr>
                       <th>Id</th>
                       <th>Username</th>
-                      <th>Password</th>
                       <th>Nama</th>
                       <th>Alamat</th>
                       <th>Nomor Telepon</th>
@@ -108,16 +106,12 @@
                     <tr>
                       <td><?php echo $data['id']; ?></td>
                       <td><?php echo $data['username']; ?></td>
-                      <td><?php echo $data['password']; ?></td>
                       <td><?php echo $data['nama']; ?></td>
                       <td><?php echo $data['alamat']; ?></td>
                       <td><?php echo $data['no_telp']; ?></td>
                       <td><?php echo $data['status']; ?></td>
                       <td><img src="../images/pelanggan/<?php echo $data['foto']; ?>" alt="" width="100px" height="100px"></td>
                       <td>
-                      <a class="btn btn-primary" href="formpelanggan.php?code=ubah&id=<?php echo $data['id']; ?>">
-                        Ubah
-                      </a>
                       <a class="btn btn-primary" href="hapus.php?code=pelanggan&id=<?php echo $data['id']; ?>">
                         Hapus
                       </a>
@@ -130,9 +124,8 @@
             </div>
 
         </div>
-        <!-- /.container-fluid -->
-
-        <!-- Sticky Footer -->
+        
+        <!-- Sticky Footer
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
@@ -140,6 +133,7 @@
             </div>
           </div>
         </footer>
+         -->
 
       </div>
       <!-- /.content-wrapper -->

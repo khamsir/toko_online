@@ -9,6 +9,8 @@
 <?php
   $code = $_GET['code'];
   $id = $_GET['id'];
+
+
   require("../database/koneksi.php");
 
   if(isset($_POST['tambah'])){
@@ -111,24 +113,24 @@
           <div class="card-header"><strong>Data Barang</strong>
           </div>
           <div class="card-body">
-            <form>
+            <form method="post" action="ubah.php?code=<?php echo $_GET['code'] ?>&id=<?php echo $_GET['id']; ?>">
             <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['nama']; ?>">
+                  <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" name="nama" value="<?php echo $data['nama']; ?>">
                   <label for="inputEmail">Nama Barang</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['harga']; ?>">
+                  <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" name="harga" value="<?php echo $data['harga']; ?>">
                   <label for="inputEmail">Harga</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="inputEmail" class="form-control" required="required" autofocus="autofocus" value="<?php echo $data['stok']; ?>">
+                  <input type="text" id="inputEmail" class="form-control" name="stok" required="required" autofocus="autofocus" value="<?php echo $data['stok']; ?>">
                   <label for="inputEmail">Stok</label>
                 </div>
               </div>
@@ -165,7 +167,7 @@
                 </div>
               </div>
 
-              <a class="btn btn-primary btn-block" href="index.php">Ubah</a>
+              <button type="submit">Ubah</button>
             </form>
             </div>
           </div>

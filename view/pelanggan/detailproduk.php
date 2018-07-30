@@ -28,9 +28,11 @@
 			</a>
 		</div>
 		<div class="bot">
-			<button class="btn btn-primary-color btn-all" href="view/keranjang.php?<?php echo "tgl=".date("Y/m/d")."&id_barang=".$data['id']; ?>">
-				Tambah ke Keranjang
-			</button>
+			<a href="view/keranjang.php?<?php echo "tgl=".date("Y/m/d")."&id_barang=".$data['id']; ?>">
+				<button class="btn btn-primary-color btn-all"> 
+					Tambah ke Keranjang
+				</button>
+			</a>
 		</div>
 	</div>
 

@@ -1,7 +1,7 @@
 <?php
     require('database/koneksi.php');
     $id = $_SESSION['id'];
-    $sql = "SELECT keranjang.tgl_ditambah,barang.* FROM keranjang JOIN barang ON keranjang.id_barang = barang.id JOIN akun ON keranjang.id_akun = akun.id WHERE akun.id = '$id' ";
+    $sql = "SELECT keranjang.id as id_cart, keranjang.tgl_ditambah, barang.id as id_barang, barang.* FROM keranjang JOIN barang ON keranjang.id_barang = barang.id JOIN akun ON keranjang.id_akun = akun.id WHERE akun.id = '$id' ";
     $hasil = $koneksi->query($sql);
 ?>
 
@@ -22,9 +22,18 @@
                     <div class="ttl"><?php echo $data['nama']; ?></div>
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-buy-color">
-                        <span>Status</span>
-                    </button>
+                    <a href="<?php echo 'index.php?path=bayar&id='.$data['id_barang']; ?>">
+                        <button class="btn btn-buy-color">
+                            <span>Bayar</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="<?php echo 'view/pelanggan/hapus_cart.php?id='.$data['id_cart']; ?>">
+                        <button class="btn btn-del-color">
+                            <span>Hapus</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

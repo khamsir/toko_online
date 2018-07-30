@@ -106,7 +106,7 @@
                       <td><?php echo $data['harga']; ?></td>
                       <td><?php echo $data['stok']; ?></td>
                       <td><?php echo $data['kategori']; ?></td>
-                      <td><img src="../images/barang/<?php echo $data['foto']; ?>" alt=""></td>
+                      <td><img style="width: 100px;" src="../images/barang/<?php echo $data['foto']; ?>" alt=""></td>
                       <td>
                       <a class="btn btn-primary" type="button" href="formbarang.php?code=ubah&id=<?php echo $data['id']; ?>">
                         Ubah

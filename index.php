@@ -1,3 +1,4 @@
+
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="public/css/card.css">
 	<link rel="stylesheet" type="text/css" href="public/css/form.css">
+	<link rel="stylesheet" type="text/css" href="public/css/image.css">
 
 	<script type="text/javascript" src="public/js/jquery.js"></script>
 	<script type="text/javascript">
@@ -141,6 +143,9 @@
 				}
 				if ($path == 'cart') {
 					require_once('view/pelanggan/keranjang.php');
+				}
+				if ($path == 'bayar') {
+					require_once('view/pelanggan/bayar.php');
 				}
 				if ($path == 'transaksi') {
 					require_once('view/pelanggan/transaksi.php');

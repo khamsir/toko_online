@@ -1,8 +1,26 @@
 <?php
     require('database/koneksi.php');
     $id = $_SESSION['id'];
-    $sql = "SELECT keranjang.tgl_ditambah ,barang.* FROM keranjang JOIN barang ON keranjang.id_barang = barang.id JOIN akun ON keranjang.id_akun = akun.id WHERE akun.id = '$id' ";
+    //$sql = "SELECT keranjang.*, barang.* FROM transaksi, barang WHERE barang.id = transaksi.id_barang WHERE transaksi.id_akun = $id";
+    $sql = "
+    SELECT
+        barang.id as id_barang,
+        barang.foto, 
+        barang.harga,
+        barang.nama,
+        transaksi.status_transaksi
+    FROM
+        transaksi
+    JOIN 
+        barang
+    ON 
+        barang.id = transaksi.id_barang
+    WHERE 
+        transaksi.id_akun = '$id'
+    ";
+
     $hasil = $koneksi->query($sql);
+    echo mysqli_error($koneksi);
 ?>
 
 <?php if($hasil->num_rows > 0){ ?>
@@ -20,7 +38,8 @@
                 </div>
                 <div class="col-2">
                     <button class="btn btn-buy-color">
-                        <span>Status</span>
+                        <span><?php echo $data['status_transaksi']; ?></span>
+                        
                     </button>
                 </div>
             </div>
