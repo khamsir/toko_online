@@ -21,7 +21,7 @@
 
 		<div class="col-1">
 			<div class="ff">
-				<div class="top" style="background-image: url(images/icon/sponbop.jpg)"></div>
+				<div class="top" style="background-image: url(images/pelanggan/<?php echo $data['foto']; ?>"></div>
 				<div class="mid">
 					<div class="pad-bot-15px"></div>
 					<div>

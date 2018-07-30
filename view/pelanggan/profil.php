@@ -12,7 +12,7 @@
 
 	<div class="col-1">
 		<div class="ff">
-			<div class="top" style="background-image: url(images/pelanggan/<?php echo $data['foto']; ?>)"></div>
+			<div class="top" style="background-image: url(images/pelanggan/<?php echo $data['foto']; ?>"></div>
 			<div class="mid">
 				<div class="pad-15px">
 					<h3><?php echo $data['nama']; ?></h3>

@@ -10,7 +10,7 @@
 			header('Location: index.php');
 			exit();
 		} else {
-			echo "string";
+			echo "Gagal Menghapus!";
 		}
 	} else if($code=='pelanggan') {
 		$sql = "DELETE FROM akun WHERE id='$id'";

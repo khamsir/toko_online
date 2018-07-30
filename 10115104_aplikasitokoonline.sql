@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 29 Jul 2018 pada 09.52
+-- Generation Time: 30 Jul 2018 pada 03.44
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -34,7 +34,7 @@ CREATE TABLE `akun` (
   `alamat` varchar(30) NOT NULL,
   `no_telp` varchar(15) NOT NULL,
   `status` enum('admin','pelanggan','','') NOT NULL,
-  `foto` varchar(25) NOT NULL
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -46,7 +46,18 @@ INSERT INTO `akun` (`id`, `username`, `password`, `nama`, `alamat`, `no_telp`, `
 (2, 'khamsir', 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4', 'UNIKOM 123', 'jd. dipatiukur bandung', '80999', 'pelanggan', '003unclecreepy_465_591_in'),
 (3, 'unikom', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'UNIKOM 123', 'jd. dipatiukur bandung', '0899927321', 'pelanggan', 'UNIKOM Logo.jpg'),
 (4, 'abdull', 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4', 'badull', 'jl jkt ', '9021894729479', 'pelanggan', '4a6451b2534bce654b899fb1a'),
-(5, 'secret', 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4', 'james', 'secret', '0921876', 'pelanggan', '002gotosleepforever_465_5');
+(5, 'secret', 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4', 'james', 'secret', '0921876', 'pelanggan', '002gotosleepforever_465_5'),
+(6, 'raafi', 'b6fcb9154185958f36469a78137e3051ba9ce181', 'Muhamad Raafi', 'jl. moch toha gang pa uca', '9999999999', 'pelanggan', '4a6451b2534bce654b899fb1a'),
+(7, 'dadang', 'b6fcb9154185958f36469a78137e3051ba9ce181', 'dadangs', 'jl dipatiukur', '08994238232', 'pelanggan', '8b233b62b36f19684ed59d69f'),
+(8, 'dadang2', 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4', 'dadang', 'jl. moch toha gang pa uca', '892187124', 'pelanggan', '33363806_608724492838066_'),
+(9, 'jajangs', 'b6fcb9154185958f36469a78137e3051ba9ce181', 'james', 'jd. dipatiukur bandung', '9182762987', 'pelanggan', '33363806_608724492838066_'),
+(10, 'masteroke', '4f26aeafdb2367620a393c973eddbe8f8b846ebd', 'master', 'akfdsh', '12323', 'pelanggan', '33674514_609951436048705_'),
+(11, 'kadir', 'b6fcb9154185958f36469a78137e3051ba9ce181', 'uhmad', 'jd. dipatiukur bandung', '898800', 'pelanggan', 'apQ0zdE_460s.jpg'),
+(12, 'odin', 'a12bf2c17c422acccb707fa811f07e743a9293d8', 'asdfsdaf', 'jaems', '98609', 'pelanggan', 'arah-mata-angin-wind-dire'),
+(14, 'kuman', '9efbbff433808f3de2d8b3676dedb36b16caf502', 'kuman', 'kuman', '123123', 'pelanggan', 'arah-mata-angin-tengah.jp'),
+(15, 'samad', '63a0cb7a53c83f2623f43f43f486ab4aaa1c1e6f', 'samad', 'samad', '889990', 'pelanggan', 'holy sheet.jpg.jpg'),
+(16, 'ujang', '8b472fb6809c09b2a3174ad5ce952390d0006cc6', 'ujang asep', 'ujangeun', '8768789900', 'pelanggan', '8b233b62b36f19684ed59d69f'),
+(17, 'bego', '139e669cab843e822b8b07f19bcb0456927fc366', 'bego', 'bego', '09876545678', 'pelanggan', 'arah-mata-angin-wind-direction.jpg');
 
 -- --------------------------------------------------------
 
@@ -63,6 +74,16 @@ CREATE TABLE `barang` (
   `foto` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `barang`
+--
+
+INSERT INTO `barang` (`id`, `nama`, `harga`, `stok`, `kategori`, `foto`) VALUES
+(2, 'Baju 1', 200000, 4, 'long sleeve', 'baju7.jpg'),
+(3, 'kaos polos', 120000, 10, 'kemeja', 'baju9.jpg'),
+(4, 'kaos marllo', 120000, 4, 'long sleeve', 'baju6.jpg'),
+(5, 'ahmed', 13000, 4, 'kaos', 'baju4.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -75,6 +96,18 @@ CREATE TABLE `keranjang` (
   `id_akun` smallint(6) NOT NULL,
   `id_barang` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `keranjang`
+--
+
+INSERT INTO `keranjang` (`id`, `tgl_ditambah`, `id_akun`, `id_barang`) VALUES
+(14, '2018-07-28 17:00:00', 5, 2),
+(15, '2018-07-28 17:00:00', 5, 2),
+(16, '2018-07-28 17:00:00', 5, 2),
+(17, '2018-07-29 17:00:00', 6, 2),
+(18, '2018-07-29 17:00:00', 6, 3),
+(19, '2018-07-29 17:00:00', 6, 3);
 
 -- --------------------------------------------------------
 
@@ -134,17 +167,17 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `transaksi`
 --

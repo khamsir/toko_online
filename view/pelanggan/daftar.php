@@ -20,19 +20,11 @@
 				</div>
 						
 				<div class="block">
-					<input class="txt txt-primary-color" type="password" name="password2" placeholder="Ulangi Password">
-				</div>
-						
-				<div class="block">
 					<input class="txt txt-primary-color" type="text" name="nama" placeholder="Nama Lengkap">
 				</div>
 						
 				<div class="block">
 					<input class="txt txt-primary-color" type="text" name="alamat" placeholder="Alamat">
-				</div>
-						
-				<div class="block">
-					<input class="txt txt-primary-color" type="Email" name="email" placeholder="Email">
 				</div>
 						
 				<div class="block">
