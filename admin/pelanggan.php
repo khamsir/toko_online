@@ -1,6 +1,15 @@
 <?php
   session_start();
   require('../database/koneksi.php');
+    if($_SESSION['status'] != "admin"){
+      header('Location: ../index.php');
+      exit();
+    }
+
+?>
+<?php
+  session_start();
+  require('../database/koneksi.php');
 
   $sql = "SELECT * FROM akun;";
   $hasil = $koneksi->query($sql);
@@ -127,7 +136,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Hakko Bio 2018</span>
+              <span>Copyright © Ikmal Andarus 2018</span>
             </div>
           </div>
         </footer>

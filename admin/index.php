@@ -21,7 +21,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Tables</title>
+    <title>Admin DistroIT</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -129,7 +129,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Hakko Bio 2018</span>
+              <span>Copyright © Ikmal Andarus 2018</span>
             </div>
           </div>
         </footer>

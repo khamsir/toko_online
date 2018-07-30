@@ -1,4 +1,12 @@
 <?php
+  session_start();
+  require('../database/koneksi.php');
+    if($_SESSION['status'] != "admin"){
+      header('Location: ../index.php');
+      exit();
+    }
+?>
+<?php
   $code = $_GET['code'];
   $id = $_GET['id'];
   require("../database/koneksi.php");

@@ -168,15 +168,15 @@
 			<div class="col-1">
 				<h3>Tentang DistroIT</h3>
 				<p>
-					DistroIT adalah toko online yang bergerak di bidang fasion, sasaran kami semua kalangan baik muda maupun tua, mulai dari anak - anak dan orang dewasa.
+					DistroIT adalah toko online yang bergerak di bidang fasion, sasaran kami semua kalangan baik muda maupun tua, mulai dari anak - anak dan orang dewasa. Kami hanya menjual pakaian yang dibuat oleh kami sendiri.
 				</p>
 			</div>
 			<div class="col-2">
-				<h3>Alamat Kami</h3>
+				<h3>Kontak Kami</h3>
 				<p>
-					Kp. Wangkal Rt.03 Rw.07 Desa Kalijaya Kecamatan Cikarang Utara Kabupaten Bekasi 17530<br />
-			        Telp : 085694984803<br />
-					Email : <a href="mailto:hakko_bio_richard@yahoo.co.id">hakko_bio_richard@yahoo.co.id</a> / <a href="mailto:hakkobiorichard@gmail.com">hakkobiorichard@gmail.com</a>
+					Jalan Sukabumi gang Morris morris No. 2256a-123 rt. 03/rw. 05<br />
+			        Telp : 082263741351<br />
+					Email : <a href="mailto:deef.erlando@gmail.com">deef.erlando@gmail.com</a>
 				</p>
 			</div>
 		</div>
